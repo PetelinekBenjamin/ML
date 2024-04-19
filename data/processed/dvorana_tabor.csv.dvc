@@ -1,0 +1,5 @@
+outs:
+- md5: f7053763f86384ad2682e8c09471e9de
+  size: 1164
+  hash: md5
+  path: dvorana_tabor.csv
