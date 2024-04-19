@@ -53,8 +53,6 @@ jobs:
       
     - name: Push to DVC
       run: |
-        git rm -r --cached 'data/processed/dvorana_tabor.csv'
-        git commit -m "stop tracking data/processed/dvorana_tabor.csv"
         dvc add data/processed/dvorana_tabor.csv
         dvc remote default origin
         dvc push -r origin
