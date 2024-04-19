@@ -44,6 +44,8 @@ jobs:
 
     - name: Set up DVC
       run: |
+        git config user.name "Benjamin"
+        git config user.email "benjamin.petelinek@gmail.com"
         dvc remote add origin https://dagshub.com/PetelinekBenjamin/ML.dvc -f
         dvc remote modify origin --local auth basic
         dvc remote modify origin --local user PetelinekBenjamin
@@ -60,8 +62,6 @@ jobs:
 
     - name: Commit and push
       run: |
-        git config user.name "Benjamin"
-        git config user.email "benjamin.petelinek@gmail.com"
         git add .
         git commit -m "Update changes"
         git push
