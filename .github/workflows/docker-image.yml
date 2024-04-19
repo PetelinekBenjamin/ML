@@ -50,7 +50,10 @@ jobs:
         dvc remote modify origin --local password 30663408e580bdb3f66e074627577a040f36b5ff
       
     - name: Push to DVC
-      run: dvc push
+      run: |
+        dvc remote default origin
+        dvc push -r origin
+
 
     - name: Commit and push
       run: |
