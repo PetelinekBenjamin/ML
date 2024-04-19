@@ -51,6 +51,7 @@ jobs:
       
     - name: Push to DVC
       run: |
+        dvc add data/processed/dvorana_tabor.csv
         dvc remote default origin
         dvc push -r origin
 
