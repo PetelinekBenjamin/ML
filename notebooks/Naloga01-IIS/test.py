@@ -9,6 +9,7 @@ class TestCodeQuality(unittest.TestCase):
 
         # Preverimo, ali je test uspešen (vrne izhodno kodo 0)
         self.assertEqual(result.returncode, 1, f"Koda ni v redu. Povzetek napak: {result.stdout.decode('utf-8')}")
+        
 
 
 if __name__ == '__main__':
