@@ -44,7 +44,7 @@ jobs:
 
     - name: Set up DVC
       run: |
-        dvc remote add origin https://dagshub.com/PetelinekBenjamin/ML.dvc
+        dvc remote add origin https://dagshub.com/PetelinekBenjamin/ML.dvc -f
         dvc remote modify origin --local auth basic
         dvc remote modify origin --local user PetelinekBenjamin
         dvc remote modify origin --local password 30663408e580bdb3f66e074627577a040f36b5ff
