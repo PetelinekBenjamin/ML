@@ -52,8 +52,6 @@ jobs:
       
     - name: Push to DVC
       run: |
-        git rm -r --cached 'data/processed/europark_-_pobreška_c..csv'
-        git commit -m "data/processed/europark_-_pobreška_c..csv"
         dvc add data/processed/europark_-_pobreška_c..csv
         dvc remote default origin
         dvc push -r origin
