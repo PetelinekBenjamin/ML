@@ -46,8 +46,8 @@ jobs:
     - name: Pull from DVC
       run: |
         dvc pull -r origin
-        git add .
-        git commit -m "Update DVC data"
+        dvc commit -m "Update DVC data"
+
 
     
 
