@@ -54,7 +54,7 @@ jobs:
       
     - name: Push to DVC
       run: |
-        dvc add data/processed/lidl_-_titova_c..csv
+        dvc add data/processed/GOSPOSVETSKA C - TURNERJEVA UL.csv.dvc
         dvc remote default origin
         dvc push -r origin
 
