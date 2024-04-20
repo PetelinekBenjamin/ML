@@ -52,9 +52,9 @@ jobs:
       
     - name: Push to DVC
       run: |
-        git rm -r --cached 'data/processed/gorkega_ul._-_oš_franceta_prešerna.csv'
-        git commit -m "stop tracking data/processed/gorkega_ul._-_oš_franceta_prešerna.csv"
-        dvc add data/processed/gorkega_ul._-_oš_franceta_prešerna.csv
+        git rm -r --cached 'data/processed/lidl_-_koroška_c..csv'
+        git commit -m "stop tracking data/processed/lidl_-_koroška_c..csv"
+        dvc add data/processed/lidl_-_koroška_c..csv
         dvc remote default origin
         dvc push -r origin
         
@@ -63,5 +63,4 @@ jobs:
         git add .
         git commit -m "Update changes"
         git push
-        git commit -m "Update changes"
-        git push
+
