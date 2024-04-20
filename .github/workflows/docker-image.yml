@@ -46,20 +46,3 @@ jobs:
     - name: Pull from DVC
       run: dvc pull -r origin
 
-    - name: Run fetch_data.py
-      run: python notebooks/Naloga01-IIS/fetch_data.py
-
-    - name: Run pre_process.py
-      run: python notebooks/Naloga01-IIS/pre_process.py
-      
-    - name: Push to DVC
-      run: |
-        dvc add data/processed/GOSPOSVETSKA C - TURNERJEVA UL.csv
-        dvc remote default origin
-        dvc push -r origin
-
-    - name: Commit and push
-      run: |
-        git add .
-        git commit -m "Update changes"
-        git push
