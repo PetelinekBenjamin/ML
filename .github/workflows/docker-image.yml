@@ -45,7 +45,7 @@ jobs:
 
     - name: Pull from DVC
       run: |
-        dvc pull -r -d data/processed/1 origin
+        dvc pull -r origin -d data/processed/
         dvc commit
         
 
