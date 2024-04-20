@@ -29,6 +29,9 @@ jobs:
 
     - name: Run flake8
       run: python notebooks/Naloga01-IIS/test.py
+
+    - name: Install DVC
+      run: pip install dvc
      
     - name: Set up DVC
       run: |
@@ -39,8 +42,6 @@ jobs:
         dvc remote modify origin --local user PetelinekBenjamin
         dvc remote modify origin --local password 30663408e580bdb3f66e074627577a040f36b5ff
 
-    - name: Install DVC
-      run: pip install dvc
 
     - name: Pull from DVC
       run: dvc pull -r origin
